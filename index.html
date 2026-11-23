@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed Omar Youssef — Assistant Professor of Law</title>
+<meta name="description" content="Ahmed Omar Youssef, Assistant Professor of Private Law. Private international law, arbitration, and AI & law. Publications, books, and academic profiles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f2340;
+    --navy-2:#16304f;
+    --gold:#c9a227;
+    --gold-soft:#e3c766;
+    --ivory:#faf7f0;
+    --ink:#1e2430;
+    --muted:#5b6472;
+    --rule:#d8d2c4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"EB Garamond", Georgia, serif;
+    color:var(--ink);
+    background:var(--ivory);
+    font-size:19px;
+    line-height:1.65;
+  }
+  .ar{font-family:"Amiri","EB Garamond",serif}
+
+  /* ---------- header ---------- */
+  header{
+    background:linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 60%, #1b3a5e 100%);
+    color:#f4efe3;
+    padding:96px 24px 84px;
+    text-align:center;
+    position:relative;
+  }
+  header::after{
+    content:"";
+    position:absolute;left:0;right:0;bottom:0;height:5px;
+    background:linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .avatar{
+    width:168px;height:168px;border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--gold);
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    margin-bottom:30px;
+  }
+  .kicker{
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    font-size:12.5px;
+    color:var(--gold-soft);
+    font-family:"EB Garamond",serif;
+    margin-bottom:26px;
+  }
+  h1{
+    font-family:"Cormorant Garamond",serif;
+    font-weight:600;
+    font-size:56px;
+    line-height:1.12;
+    letter-spacing:.01em;
+  }
+  .titles{
+    margin-top:22px;
+    font-size:20px;
+    color:#cfd8e4;
+    font-style:italic;
+    max-width:760px;
+    margin-left:auto;margin-right:auto;
+  }
+  .titles .sep{color:var(--gold);font-style:normal;padding:0 10px}
+  .fields{
+    margin-top:30px;
+    font-size:15.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#9fb0c4;
+  }
+  .fields b{color:var(--gold-soft);font-weight:500}
+
+  /* ---------- layout ---------- */
+  main{max-width:880px;margin:0 auto;padding:70px 28px 30px}
+  section{margin-bottom:74px}
+  h2{
+    font-family:"Cormorant Garamond",serif;
+    font-weight:600;
+    font-size:32px;
+    color:var(--navy);
+    display:flex;align-items:center;gap:18px;
+    margin-bottom:26px;
+  }
+  h2::after{content:"";flex:1;height:1px;background:var(--rule)}
+  h2 .no{
+    font-size:15px;color:var(--gold);letter-spacing:.2em;font-family:"EB Garamond",serif;
+  }
+  p.lead{font-size:21px}
+  p + p{margin-top:14px}
+
+  .chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
+  .chips li{
+    border:1px solid var(--navy);
+    color:var(--navy);
+    padding:7px 18px;
+    border-radius:999px;
+    font-size:16.5px;
+    background:#fff;
+  }
+  .chips li::before{content:"§ ";color:var(--gold)}
+
+  /* publications */
+  ol.works{list-style:none;counter-reset:w}
+  ol.works li{
+    counter-increment:w;
+    padding:15px 0 15px 58px;
+    position:relative;
+    border-bottom:1px solid var(--rule);
+  }
+  ol.works li::before{
+    content:counter(w,decimal-leading-zero);
+    position:absolute;left:0;top:17px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:21px;color:var(--gold);
+  }
+  ol.works .t{display:block;font-size:19.5px}
+  ol.works .t.ar{text-align:right;direction:rtl}
+  .more{margin-top:18px;font-style:italic;color:var(--muted);font-size:17px}
+  .more a{color:var(--navy)}
+
+  /* education */
+  dl.edu{display:grid;grid-template-columns:110px 1fr;row-gap:20px;column-gap:26px}
+  dl.edu dt{
+    font-family:"Cormorant Garamond",serif;
+    font-size:21px;color:var(--gold);font-weight:600;
+  }
+  dl.edu dd{font-size:19px}
+  dl.edu dd small{display:block;color:var(--muted);font-size:16px;font-style:italic}
+
+  /* profiles */
+  .profiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;list-style:none}
+  .profiles a{
+    display:block;text-decoration:none;
+    border:1px solid var(--rule);
+    background:#fff;
+    padding:20px 16px;text-align:center;
+    color:var(--navy);
+    transition:all .18s ease;
+  }
+  .profiles a:hover{border-color:var(--gold);box-shadow:0 6px 18px rgba(15,35,64,.08);transform:translateY(-2px)}
+  .profiles .pname{
+    font-family:"Cormorant Garamond",serif;font-size:21px;font-weight:600;display:block
+  }
+  .profiles .pdesc{font-size:14.5px;color:var(--muted);display:block;margin-top:4px}
+
+  footer{
+    background:var(--navy);color:#9fb0c4;
+    text-align:center;padding:44px 24px 50px;font-size:16px;
+  }
+  footer .fname{font-family:"Cormorant Garamond",serif;font-size:24px;color:#f4efe3;letter-spacing:.04em}
+  footer .fline{margin-top:8px}
+  footer a{color:var(--gold-soft);text-decoration:none}
+</style>
+</head>
+<body>
+
+<header>
+  <img class="avatar" src="photo-square.jpg" alt="Ahmed Omar Youssef">
+  <div class="kicker">Private International Law · Arbitration · AI &amp; Law</div>
+  <h1>Ahmed Omar Youssef</h1>
+  <div class="titles">
+    Assistant Professor of Private Law, Kingdom University, Bahrain
+    <span class="sep">·</span>
+    Lecturer (Assistant Professor) of Private International Law, Capital University, Egypt
+    <span class="sep">·</span>
+    Co-Founder, Al Nokhba Group for Law and Legal Consultations
+  </div>
+  <div class="fields"><b>16</b> peer-reviewed papers &nbsp;·&nbsp; <b>6</b> books &nbsp;·&nbsp; taught at universities in Egypt and the Gulf</div>
+</header>
+
+<main>
+
+<section id="about">
+  <h2><span class="no">01</span> About</h2>
+  <p class="lead">Ahmed Omar Youssef is an Assistant Professor of Private Law at Kingdom University, Bahrain, and Lecturer (Assistant Professor) of Private International Law at Capital University, Egypt.</p>
+  <p>He is also Co-Founder of Al Nokhba Group for Law and Legal Consultations, where he practises as a lawyer specialising in international contracting, cross-border disputes, international jurisdiction, nationality and the status of foreigners, and private international law matters generally, with practical experience in the Arabian Gulf region. This practice informs his scholarship and keeps his teaching close to how cross-border legal questions arise in real cases.</p>
+</section>
+
+<section id="research">
+  <h2><span class="no">02</span> Research Interests</h2>
+  <ul class="chips">
+    <li>Private International Law</li>
+    <li>Conflict of Laws</li>
+    <li>International Contracts</li>
+    <li>Nationality Law</li>
+    <li>International Commercial Arbitration</li>
+    <li>AI &amp; Law</li>
+  </ul>
+</section>
+
+<section id="publications">
+  <h2><span class="no">03</span> Selected Works</h2>
+  <ol class="works">
+    <li><span class="t">Traceability, Jurisdiction and Accountability in Distributed AI Inference Systems Operating in Stateless Computational Environments</span></li>
+    <li><span class="t">Ethical Decision-Making in Nationality Rights: A Legal-Policy Framework for Gender Equality in the Egyptian Nationality Law</span></li>
+    <li><span class="t">The Law Applicable to Pre-contractual Negotiations under the Rome II Regulation of 2007</span></li>
+    <li><span class="t">The Implications of Neoliberal Globalization on Pre-contractual Obligations: An Analytical and Comparative Interdisciplinary Study</span></li>
+    <li><span class="t ar">المرحلة قبل التعاقدية في القانون الدولي الخاص</span></li>
+    <li><span class="t ar">الأمن السيبراني والتحكيم التجاري الدولي: دراسة مقارنة</span></li>
+    <li><span class="t ar">جنسنة الآلة: تساؤلات حول الجنسية والمواطنة للإنسان والآلات فائقة الذكاء</span></li>
+    <li><span class="t ar">الجنسية المصرية ومركز الأجانب</span></li>
+  </ol>
+  <p class="more">Full record of 16 papers and 6 books on <a href="https://orcid.org/0009-0002-3739-6574">ORCID</a> and <a href="https://scholar.google.com/citations?user=bsmsi-MAAAAJ">Google Scholar</a>.</p>
+</section>
+
+<section id="education">
+  <h2><span class="no">04</span> Education</h2>
+  <dl class="edu">
+    <dt>2022</dt><dd>PhD in Law, Helwan University<small>Private international law</small></dd>
+    <dt>2016</dt><dd>Postgraduate Diploma in International Law, Helwan University</dd>
+    <dt>2015</dt><dd>Postgraduate Diploma in Public Law, Helwan University</dd>
+    <dt>2014</dt><dd>LLB, Helwan University</dd>
+  </dl>
+</section>
+
+<section id="profiles">
+  <h2><span class="no">05</span> Academic Profiles</h2>
+  <ul class="profiles">
+    <li><a href="https://orcid.org/0009-0002-3739-6574"><span class="pname">ORCID</span><span class="pdesc">0009-0002-3739-6574</span></a></li>
+    <li><a href="https://scholar.google.com/citations?user=bsmsi-MAAAAJ"><span class="pname">Google Scholar</span><span class="pdesc">Citations &amp; papers</span></a></li>
+    <li><a href="https://www.scopus.com/authid/detail.uri?authorId=60662321700"><span class="pname">Scopus</span><span class="pdesc">Author ID 60662321700</span></a></li>
+    <li><a href="https://papers.ssrn.com/Sol3/Cf_Dev/AbsByAuth.cfm?per_id=3884043"><span class="pname">SSRN</span><span class="pdesc">Working papers</span></a></li>
+    <li><a href="https://www.linkedin.com/in/dr-ahmedomar/"><span class="pname">LinkedIn</span><span class="pdesc">Professional profile</span></a></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <div class="fname">Ahmed Omar Youssef</div>
+  <div class="fline">Assistant Professor of Private Law · Bahrain &amp; Egypt</div>
+  <div class="fline">Contact: <a href="mailto:iamahmedomar@gmail.com">iamahmedomar@gmail.com</a> · <a href="https://www.linkedin.com/in/dr-ahmedomar/">LinkedIn</a></div>
+</footer>
+
+</body>
+</html>
